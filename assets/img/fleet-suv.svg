@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Luxury SUV placeholder">
+  <defs>
+    <linearGradient id="g2" x1="0" x2="1">
+      <stop offset="0%" stop-color="#c9a862"/>
+      <stop offset="100%" stop-color="#eddca9"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="#0d121a"/>
+  <path d="M30 230c40-60 130-110 250-110 140 0 260 30 300 60 30 20 50 40 60 70 4 10-2 20-14 20H520c-10-50-50-70-110-70s-100 30-110 70H220c-28-90-110-110-170-80-14 8-25 20-30 40H30c-16 0-14-8-0-20z" fill="url(#g2)" opacity="0.9"/>
+</svg>
+

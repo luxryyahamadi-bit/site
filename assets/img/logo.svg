@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="YAHIMDI CAR LUXURY logo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#c9a862"/>
+      <stop offset="100%" stop-color="#eddca9"/>
+    </linearGradient>
+    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1a2230"/>
+      <stop offset="100%" stop-color="#0d121a"/>
+    </radialGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Badge background -->
+  <circle cx="64" cy="64" r="56" fill="url(#bg)" stroke="url(#g)" stroke-width="2" />
+  <circle cx="64" cy="64" r="52" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <!-- Stylized Y monogram -->
+  <g fill="none" stroke="url(#g)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- central Y -->
+    <path d="M64 36 L64 88" stroke-width="6"/>
+    <path d="M64 36 L46 54" stroke-width="6"/>
+    <path d="M64 36 L82 54" stroke-width="6"/>
+
+    <!-- wing accents -->
+    <path d="M30 66 C44 58, 52 58, 60 60" stroke-width="3"/>
+    <path d="M98 66 C84 58, 76 58, 68 60" stroke-width="3"/>
+  </g>
+
+  <!-- Crown -->
+  <g transform="translate(64 28)" filter="url(#softGlow)">
+    <path d="M -12 0 L -4 -8 L 0 -2 L 4 -8 L 12 0 Z" fill="url(#g)"/>
+    <rect x="-12" y="0" width="24" height="3" rx="1.5" fill="url(#g)"/>
+  </g>
+</svg>
+

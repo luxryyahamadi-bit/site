@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Sport coupe placeholder">
+  <defs>
+    <linearGradient id="g3" x1="0" x2="1">
+      <stop offset="0%" stop-color="#c9a862"/>
+      <stop offset="100%" stop-color="#eddca9"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="#0d121a"/>
+  <path d="M50 230c50-70 170-120 300-120 120 0 210 30 250 50 30 14 40 30 50 60 4 10-2 20-14 20H520c-14-40-60-60-120-60s-100 20-110 60H240c-24-80-120-100-170-70-16 8-28 20-34 40H50c-16 0-16-8 0-20z" fill="url(#g3)" opacity="0.9"/>
+</svg>
+

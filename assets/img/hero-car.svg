@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Luxury car placeholder image">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f141d"/>
+      <stop offset="100%" stop-color="#0a0d12"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" x2="1">
+      <stop offset="0%" stop-color="#c9a862"/>
+      <stop offset="100%" stop-color="#eddca9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <!-- Road glow -->
+  <ellipse cx="600" cy="520" rx="520" ry="120" fill="#0d121a"/>
+  <ellipse cx="600" cy="520" rx="380" ry="80" fill="#0f1620"/>
+  <!-- Stylized car silhouette -->
+  <path d="M120 420c50-70 180-150 360-150 200 0 360 40 420 60 60 20 120 80 150 120 15 20 8 40-20 40H940c-14-60-60-100-140-100s-126 40-140 100H420c-36-110-136-140-228-96-40 18-68 48-84 96H120c-30 0-36-20-0-70z" fill="url(#gold)" opacity="0.9"/>
+  <!-- Headlight glints -->
+  <circle cx="320" cy="455" r="6" fill="#fff" opacity="0.6"/>
+  <circle cx="880" cy="455" r="6" fill="#fff" opacity="0.6"/>
+</svg>
+
