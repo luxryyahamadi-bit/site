@@ -12,43 +12,54 @@
       --bg:#F3F7FF;
       --text:#212121;
       --text-light:#ffffff;
-      --ok:#2e7d32;
-      --warn:#E53935;
       --card:#ffffff;
-      --shadow:0 8px 24px rgba(13,71,161,.12);
-      --radius:18px;
+      --shadow:0 10px 30px rgba(13,71,161,.12);
+      --radius:20px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:linear-gradient(135deg,var(--bg),#fff);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6;}
-    .wrap{max-width:980px;margin:48px auto;padding:0 20px 64px}
+    html,body{
+      margin:0;padding:0;
+      background:
+        radial-gradient(900px 500px at -10% -20%, #e9f1ff 0%, transparent 60%),
+        radial-gradient(900px 500px at 110% 120%, #e9f1ff 0%, transparent 60%),
+        linear-gradient(135deg,var(--bg),#fff);
+      color:var(--text);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      line-height:1.65;
+    }
+    .wrap{max-width:1000px;margin:48px auto;padding:0 22px 64px}
     header{
       background:linear-gradient(120deg,var(--primary),var(--secondary));
-      color:var(--text-light); border-radius:28px; padding:32px 28px; box-shadow:var(--shadow);
+      color:var(--text-light); border-radius:28px; padding:36px 30px; box-shadow:var(--shadow);
+      position:relative; overflow:hidden;
+    }
+    header:after{
+      content:""; position:absolute; right:-60px; top:-60px; width:220px; height:220px;
+      background:radial-gradient(closest-side,rgba(255,255,255,.25),rgba(255,255,255,0));
+      border-radius:50%;
     }
     header .badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.12);padding:8px 12px;border-radius:999px;font-size:14px;letter-spacing:.3px}
-    header h1{margin:14px 0 6px;font-size:34px;line-height:1.2}
+    header h1{margin:14px 0 6px;font-size:36px;line-height:1.2}
     header p{margin:0;opacity:.95}
-    .grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:22px}
-    @media(min-width:860px){.grid{grid-template-columns: 2fr 1fr}}
-    .card{
-      background:var(--card); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow);
-    }
+    .grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:24px}
+    @media(min-width:880px){.grid{grid-template-columns: 2fr 1fr}}
+    .card{background:var(--card); border-radius:var(--radius); padding:24px; box-shadow:var(--shadow)}
     h2{margin:0 0 10px 0;font-size:22px;color:var(--primary)}
-    h3{margin:24px 0 8px 0;font-size:18px;color:#0f2f6f}
-    p,li{font-size:15.5px}
-    .kvs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0 0}
-    .kv{background:#f7faff;border:1px solid #e6efff;border-radius:12px;padding:10px 12px}
-    .kv b{display:block;color:#0f2f6f;font-size:12px;letter-spacing:.3px;text-transform:uppercase;margin-bottom:2px}
-    .note{background:#f9fdf9;border:1px solid #e0f2e9;color:#1b5e20;border-radius:12px;padding:12px 14px;margin:14px 0}
-    .warn{background:#fff6f6;border:1px solid #ffd9d9;color:#b71c1c;border-radius:12px;padding:12px 14px;margin:14px 0}
-    .list{display:grid;gap:8px;margin:8px 0 0}
+    h3{margin:20px 0 10px 0;font-size:18px;color:#0f2f6f}
+    p,li{font-size:15.8px;margin:8px 0}
+    .kvs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0 4px}
+    .kv{background:#f7faff;border:1px solid #e6efff;border-radius:14px;padding:12px}
+    .kv b{display:block;color:#0f2f6f;font-size:12px;letter-spacing:.35px;text-transform:uppercase;margin-bottom:4px}
+    .list{display:grid;gap:10px;margin:8px 0 0}
     .list .item{display:flex;gap:12px;align-items:flex-start;background:#f7f9ff;border:1px solid #e6efff;border-radius:14px;padding:12px}
     .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);margin-top:6px;flex-shrink:0}
-    footer{margin-top:28px;color:#51627a;font-size:13px;text-align:center}
-    .muted{opacity:.7}
+    aside.card ul{padding-left:18px;margin:8px 0}
+    footer{margin-top:28px;color:#51627a;font-size:13.2px;text-align:center}
+    .muted{opacity:.78}
     .pill{display:inline-block;background:#eef4ff;border:1px solid #dfe8ff;color:#294a9a;padding:4px 8px;border-radius:999px;font-size:12px}
-    .updated{font-size:13px;color:#3b60b3}
+    .updated{font-size:13.2px;color:#e6f0ff}
     .mono{font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:13px;background:#f6f8fe;border:1px solid #e7ebff;border-radius:8px;padding:4px 6px}
+    a{color:#0D47A1;text-decoration:none} a:hover{text-decoration:underline}
     @media print{
       header{border-radius:0; box-shadow:none}
       .card{box-shadow:none}
@@ -67,6 +78,17 @@
 
     <div class="grid" role="main">
       <section class="card">
+        <h2>About This Application</h2>
+        <p>
+          The <b>Yahimdi Car Luxury</b> mobile application allows customers to <b>view available vehicles</b>,
+          check specifications and daily rates, prepare booking details, and generate a rental contract
+          in PDF format that is stored locally on the device.
+        </p>
+        <p>
+          For convenience, the app can open your chosen communication or map apps (WhatsApp, phone dialer, Email, or Google Maps)
+          only when you select those actions.
+        </p>
+
         <h2>1) Developer Information</h2>
         <p>This application is developed and published by <b>Yahimdi Car Luxury (SARL)</b>, a registered car rental company in Meknes, Morocco.</p>
         <div class="kvs">
@@ -74,7 +96,7 @@
           <div class="kv"><b>Tax ID (IF)</b> 58705</div>
           <div class="kv"><b>Address</b> No 15 Mag 1 Lot Rachad Toulal, Meknes, Morocco</div>
           <div class="kv"><b>Phone</b> +212771540645</div>
-          <div class="kv"><b>Email</b> <a href="mailto:contact@yahimdicarluxury.rent">contact@yahimdicarluxury.rent</a></div>
+          <div class="kv"><b>Email</b> <a href="mailto:contact@yahimdicarluxury.rent">contact@yahimdicarluxury.rent</a><br><a href="mailto:support@yahimdicarluxury.rent">support@yahimdicarluxury.rent</a></div>
           <div class="kv"><b>Purpose</b> Car rental without driver</div>
         </div>
 
@@ -92,7 +114,7 @@
         <p>The application works fully <b>offline</b>. Your booking details remain on your device. The generated PDF contract is saved in your device’s <span class="mono">Downloads</span> folder. You are responsible for printing, signing, and bringing the contract when picking up the car.</p>
 
         <h2>5) Communication Features</h2>
-        <p>The app provides optional buttons that let you start a <b>WhatsApp</b> chat and make a <b>phone call</b> to our official number. These actions happen only if you tap the button. The app does not send any information in the background and does not store your communications.</p>
+        <p>The app provides optional buttons that let you start a <b>WhatsApp</b> chat, make a <b>phone call</b> to our official number, or compose an <b>Email</b>. These actions happen only if you tap the button. The app does not send any information in the background and does not store your communications.</p>
 
         <h2>6) Third‑Party Services</h2>
         <p>The app can open WhatsApp, Email, or Google Maps only when you choose to use them. We do not collect or control any information shared through these external services.</p>
@@ -107,24 +129,17 @@
         <p>We may update this Privacy Policy to reflect improvements or legal requirements. The latest version will always be available inside the app and on our official hosting page.</p>
 
         <h2>10) Contact</h2>
-        <p>If you have questions about this Privacy Policy, please contact <b>Yahimdi Car Luxury (SARL)</b> at our office in Meknes, Morocco, by phone at <b>+212771540645</b> or by email at <a href="mailto:contact@yahimdicarluxury.rent">contact@yahimdicarluxury.rent</a>.</p>
-
-        <div class="note">
-          <b>Tip:</b> If you share a contract via WhatsApp or Email, that action is initiated by you and handled by those apps directly.
-        </div>
-        <div class="warn">
-          <b>Reminder:</b> Do not include your email address inside the generated PDF contract.
-        </div>
+        <p>If you have questions about this Privacy Policy, please contact <b>Yahimdi Car Luxury (SARL)</b> at our office in Meknes, Morocco, by phone at <b>+212771540645</b> or by email at <a href="mailto:contact@yahimdicarluxury.rent">contact@yahimdicarluxury.rent</a> or <a href="mailto:support@yahimdicarluxury.rent">support@yahimdicarluxury.rent</a>.</p>
       </section>
 
       <aside class="card" aria-label="Summary">
         <h3>Summary</h3>
-        <p class="muted">We don’t collect personal data. Booking details stay on your device and are used only to create a local PDF contract.</p>
+        <p class="muted">No data is collected. Booking details stay on your device and are used only to create a local PDF contract.</p>
         <h3>Quick Facts</h3>
         <ul>
           <li>No analytics or trackers</li>
           <li>Offline by default</li>
-          <li>Optional WhatsApp & phone call buttons</li>
+          <li>Optional WhatsApp / Call / Email buttons</li>
           <li>Local PDF saved to <span class="mono">Downloads</span></li>
         </ul>
         <h3>Data Safety</h3>
